@@ -71,7 +71,7 @@ function createOnlineVisitorsCounterElement() {
       return false;
     };
     button.style.cssText =
-      "z-index:100; position: fixed; bottom: 5px; right: 10px; background-color:transparent; -moz-border-radius:28px; -webkit-border-radius:28px; border-radius:28px; border:2px solid #8dc0e3; display:inline-block; cursor:pointer; color:#8dc0e3; font-family:Trebuchet MS; font-size:13px; padding:9px 15px; text-decoration:none;";
+      "z-index:100; position: fixed; bottom: 5px; right: 10px; background-color:transparent; -moz-border-radius:28px; -webkit-border-radius:28px; border-radius:28px; border:2px solid #C20C01; display:inline-block; cursor:pointer; color:#C20C01; font-family:Trebuchet MS; font-size:13px; padding:9px 15px; text-decoration:none;";
     document.body.appendChild(button);
   } else if (existingElement.tagName.toLowerCase() == "a") {
     // If it already exists and its an anchor, we just add some properties to it.
@@ -96,7 +96,7 @@ function createOnlineVisitorsListDiv() {
   var onlineVisitorsList = document.createElement("div");
   onlineVisitorsList.id = "online-visitors-list";
   onlineVisitorsList.style.cssText =
-    "top: 50%; left: 50%; width:50%; height:18em; margin-top: -9em; margin-left: -25%; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; border:3px solid #8dc0e3; position:fixed; z-index:124;";
+    "top: 50%; left: 50%; width:50%; height:18em; margin-top: -9em; margin-left: -25%; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; border:3px solid #C20C01; position:fixed; z-index:124;";
 
   var xmlhttp = window.XMLHttpRequest
     ? new XMLHttpRequest()
