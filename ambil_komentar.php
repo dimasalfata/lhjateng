@@ -60,7 +60,7 @@ function ambil_reply($db1, $parent_id = 0, $marginleft = 0){
               <p>'.$row["komentar"].'</p>
             </div>';
 
-        if($tingkat < 4){
+        if($tingkat < 5){
           $output .= '
               <div class="col-sm-2" align="right">
                 <button type="button" class="btn btn-primary reply" id="'.$row["komentar_id"].'">Reply</button>

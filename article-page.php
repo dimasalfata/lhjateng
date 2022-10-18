@@ -30,6 +30,9 @@
     <!-- Start Style -->
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- End Style -->
 
     <title>Leadershub Jawa Tengah</title>
@@ -37,6 +40,9 @@
 
   </head>
   <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
@@ -51,11 +57,26 @@
         event.preventDefault();
         let nama_pengirim = $('#nama_pengirim').val();
         let komen = $('#komen').val();
+        swal.fire({
+              type: 'success',
+              title: 'Sukses...',
+              text: 'Komentar article sudah terkirim!'
+              });
         
         if(nama_pengirim==''){
-            alert("Nama Pengirim Harus disii");
+            swal.fire({
+              type: 'error',
+              title: 'Oops...',
+              text: 'Nama pengirim harus diisi!',
+              footer: '<a href="#">Why do I have this issue?</a>'
+              });
         } else if(komen==''){
-            alert("Komentar Harus disii");
+            swal.fire({
+              type: 'error',
+              title: 'Oops...',
+              text: 'Komentar harus diisi!',
+              footer: '<a href="#">Why do I have this issue?</a>'
+              });
         } else {
             var form_data = $(this).serialize();
             $.ajax({

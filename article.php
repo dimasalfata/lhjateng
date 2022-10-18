@@ -70,9 +70,6 @@
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <?php foreach($top as $rowTop) : ?>
           <a href="article-page.php?id=<?= $rowTop["id_artikel"]?>">
-               <a href="https://info.flagcounter.com/VDiR">
-      <img src="https://s11.flagcounter.com/count/VDiR/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-    </a>
             <div class="carousel-inner">
               <div class="carousel-item active carousel-custom rounded-4">
                 <img src="img/article/<?= $rowTop["gambar"]?>" alt="..." class="img-featured">
@@ -197,7 +194,7 @@
           </div>         
         </div>
       </div>
-
+      
     </footer>
     <!-- END FOOTER-->
   
