@@ -3,8 +3,9 @@ session_start();
 include 'koneksi.php';
 include 'csrf.php';
 $output='';
+$artikel_id = $_POST['artikel_id'];
 
-$query = "SELECT * FROM tbl_komentar WHERE parent_komentar_id = '0' ORDER BY komentar_id DESC";
+$query = "SELECT * FROM tbl_komentar WHERE parent_komentar_id = '0' AND artikel_id = '".$artikel_id."'  ORDER BY komentar_id DESC";
 $dewan1 = $db1->prepare($query);
 $dewan1->execute();
 $res1 = $dewan1->get_result();
